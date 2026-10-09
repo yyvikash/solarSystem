@@ -133,6 +133,16 @@ planets.deimos = createPlanet(
   { r: 107, g: 0, b: 1, a: 255 },
 );
 
+planets.saturnRing = {
+  center: {
+    x: planets.saturn.center.x,
+    y: planets.saturn.center.y,
+  },
+  radiusH: 42,
+  radiusV: 52,
+  color: r.WHITE,
+};
+
 function drawPlanets() {
   r.DrawCircleV(sun.center, sun.radius, sun.color);
 
@@ -166,6 +176,15 @@ function drawPlanets() {
     planets.saturn.center,
     planets.saturn.radius,
     planets.saturn.color,
+  );
+
+  r.DrawEllipseLines(
+    planets.saturn.center.x,
+    planets.saturn.center.y,
+    planets.saturnRing.radiusH,
+    planets.saturnRing.radiusV,
+
+    planets.saturnRing.color,
   );
 
   r.DrawCircleV(

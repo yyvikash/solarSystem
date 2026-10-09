@@ -1,7 +1,7 @@
 const r = require("raylib");
-const p = require("./planetes");
+const p = require("./planets");
 
-const WINDOW_WIDTH = 1600;
+const WINDOW_WIDTH = 1700;
 const WINDOW_HEIGHT = 1000;
 const FPS = 60;
 
